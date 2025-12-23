@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mockup - Timeline Horizontale</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Georgia", serif;
+      background: #faf9f7;
+      padding: 60px 20px;
+    }
+    .container {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      margin-bottom: 60px;
+      color: #1a1a1a;
+      font-family: Arial, sans-serif;
+      font-weight: 300;
+    }
+    .timeline-wrapper {
+      overflow-x: auto;
+      padding: 40px 0 60px;
+      position: relative;
+    }
+    .timeline-horizontal {
+      display: flex;
+      gap: 80px;
+      min-width: max-content;
+      padding: 0 100px;
+      position: relative;
+    }
+    /* Ligne horizontale continue */
+    .timeline-horizontal::before {
+      content: '';
+      position: absolute;
+      top: 80px;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(to right, #c9b5a0, #e8d5c4, #c9b5a0);
+    }
+    .day-column {
+      display: flex;
+      flex-direction: column;
+      min-width: 350px;
+    }
+    .day-header {
+      text-align: center;
+      font-size: 2em;
+      color: #5a4a3a;
+      margin-bottom: 40px;
+      font-weight: bold;
+    }
+    .events-column {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      position: relative;
+    }
+    .timeline-event {
+      position: relative;
+      padding-left: 60px;
+    }
+    /* Point sur la ligne */
+    .timeline-event::before {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: -20px;
+      width: 20px;
+      height: 20px;
+      background: #c9b5a0;
+      border: 4px solid white;
+      border-radius: 50%;
+      z-index: 2;
+      box-shadow: 0 0 0 4px #c9b5a0;
+    }
+    /* Ligne verticale jusqu'à l'événement */
+    .timeline-event::after {
+      content: '';
+      position: absolute;
+      left: 24px;
+      top: -10px;
+      width: 2px;
+      height: 30px;
+      background: #c9b5a0;
+      z-index: 1;
+    }
+    .event-card {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-left: 5px solid #c9b5a0;
+    }
+    .event-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+    .event-icon {
+      font-size: 3em;
+      margin-bottom: 10px;
+      display: block;
+    }
+    .event-time {
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #7a6a5a;
+      margin-bottom: 10px;
+    }
+    .event-title {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #1a1a1a;
+      margin-bottom: 8px;
+    }
+    .event-description {
+      color: #666;
+      font-size: 0.95em;
+      line-height: 1.6;
+    }
+
+    /* Scrollbar personnalisée */
+    .timeline-wrapper::-webkit-scrollbar {
+      height: 12px;
+    }
+    .timeline-wrapper::-webkit-scrollbar-track {
+      background: #e8d5c4;
+      border-radius: 10px;
+    }
+    .timeline-wrapper::-webkit-scrollbar-thumb {
+      background: #c9b5a0;
+      border-radius: 10px;
+    }
+    .timeline-wrapper::-webkit-scrollbar-thumb:hover {
+      background: #5a4a3a;
+    }
+
+    @media (max-width: 768px) {
+      .day-column {
+        min-width: 280px;
+      }
+      .timeline-horizontal {
+        gap: 50px;
+        padding: 0 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Programme des festivités</h1>
+    <p style="text-align: center; color: #666; margin-bottom: 30px; font-style: italic;">← Faites défiler horizontalement →</p>
+
+    <div class="timeline-wrapper">
+      <div class="timeline-horizontal">
+        <!-- Vendredi -->
+        <div class="day-column">
+          <div class="day-header">Vendredi</div>
+          <div class="events-column">
+            <div class="timeline-event">
+              <div class="event-card">
+                <span class="event-icon">🏕️</span>
+                <div class="event-time">12:00</div>
+                <div class="event-title">Installation des espaces</div>
+                <div class="event-description">Arrivée et installation / Accès à la piscine</div>
+              </div>
+            </div>
+
+            <div class="timeline-event">
+              <div class="event-card">
+                <span class="event-icon">🥘</span>
+                <div class="event-time">20:00</div>
+                <div class="event-title">Repas du soir</div>
+                <div class="event-description">Paëlla participative (participation financière demandée, rosé et bière fournis, autres alcools à ramener)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Samedi -->
+        <div class="day-column">
+          <div class="day-header">Samedi</div>
+          <div class="events-column">
+            <div class="timeline-event">
+              <div class="event-card">
+                <span class="event-icon">☀️</span>
+                <div class="event-time">Journée</div>
+                <div class="event-title">Temps libre</div>
+                <div class="event-description">Détente et activités libres</div>
+              </div>
+            </div>
+
+            <div class="timeline-event">
+              <div class="event-card">
+                <span class="event-icon">🔔</span>
+                <div class="event-time">16:00</div>
+                <div class="event-title">Regroupement</div>
+                <div class="event-description">Préparation pour la cérémonie</div>
+              </div>
+            </div>
+
+            <div class="timeline-event">
+              <div class="event-card">
+                <span class="event-icon">💍</span>
+                <div class="event-time">16:30</div>
+                <div class="event-title">Cérémonie laïque</div>
+                <div class="event-description">Lieu surprise</div>
+              </div>
+            </div>
+
+            <div class="timeline-event">
+              <div class="event-card">
+                <span class="event-icon">🥂</span>
+                <div class="event-time">18:00</div>
+                <div class="event-title">Photos / Apéro / Repas</div>
+                <div class="event-description">Soirée festive</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dimanche -->
+        <div class="day-column">
+          <div class="day-header">Dimanche</div>
+          <div class="events-column">
+            <div class="timeline-event">
+              <div class="event-card">
+                <span class="event-icon">🚚</span>
+                <div class="event-time">12:00</div>
+                <div class="event-title">Repas Food Truck</div>
+                <div class="event-description">Déjeuner convivial</div>
+              </div>
+            </div>
+
+            <div class="timeline-event">
+              <div class="event-card">
+                <span class="event-icon">🎯</span>
+                <div class="event-time">Après-midi</div>
+                <div class="event-title">Activités libres</div>
+                <div class="event-description">Jeux, détente piscine, pétanque, sieste, rangement</div>
+              </div>
+            </div>
+
+            <div class="timeline-event">
+              <div class="event-card">
+                <span class="event-icon">👋</span>
+                <div class="event-time">16:00</div>
+                <div class="event-title">Fin</div>
+                <div class="event-description">Départ</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

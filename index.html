@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nolwenn et Alban - Mariage</title>
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -15,29 +16,53 @@
           <li><a href="#home">Accueil</a></li>
           <li><a href="#programme">Programme</a></li>
           <li><a href="#message">Message</a></li>
-          <li><a href="#hebergements">Hébergements</a></li>
           <li><a href="#lieux">Les lieux</a></li>
+          <li><a href="#plan">Plan</a></li>
+          <li><a href="#acces">Accès</a></li>
         </ul>
       </div>
     </nav>
 
     <!-- Hero Section -->
     <div class="hero" id="home">
-      <div class="hero-header">
-        <p>Le mariage de</p>
-        <h1>Nolwenn & Alban</h1>
-      </div>
-      <div class="hero-content">
-        <div class="hero-text">
-          <p class="hero-date">24/25/26 Juillet 2026</p>
-          <p class="hero-venue">Domaine de Garandeau - Lambesc</p>
+      <div class="countdown" id="countdown"></div>
+
+      <!-- Panneau d'aéroport -->
+      <div class="airport-board">
+        <div class="board-row">
+          <div class="plane-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+          <div class="board-title">
+            <p>Mariage</p>
+            <h1>Nolwenn & Alban</h1>
+          </div>
         </div>
-        <div class="hero-image">
-          <img
-            src="assets/PHOTO-2023-04-15-13-13-18.jpg"
-            alt="Nolwenn et Alban"
-          />
-          <div class="countdown" id="countdown"></div>
+        <div class="board-row">
+          <div class="board-spacer"></div>
+          <div class="board-info">
+            <div class="board-label">DEPARTURE</div>
+            <div class="board-value">
+              <span>24/25/26</span>
+              <span>Juillet</span>
+              <span>2026</span>
+              <span>|</span>
+              <span>Domaine</span>
+              <span>de</span>
+              <span>Garandeau</span>
+              <span>-</span>
+              <span>Lambesc</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -48,79 +73,108 @@
         <h2>Programme des festivités</h2>
         <div class="timeline">
           <!-- Vendredi -->
-          <div class="day-card">
-            <h3>Vendredi</h3>
-            <span></span>
-            <div class="event span-3">
-              <span class="event-icon">🏕️</span>
-              <span class="event-time">12:00</span> -
-              <strong>Installation des espaces</strong>
-              <p>Arrivée et installation / Accès à la piscine</p>
+          <div class="day-section">
+            <div class="day-title"><span>Vendredi</span></div>
+
+            <div class="timeline-event">
+              <div class="event-icon">🏕️</div>
+              <div class="event-content">
+                <div class="event-time">12:00</div>
+                <div class="event-title">Installation des espaces</div>
+                <div class="event-description">
+                  Arrivée et installation / Accès à la piscine
+                </div>
+              </div>
             </div>
-            <div class="event">
-              <span class="event-icon">🥘</span>
-              <span class="event-time">20:00</span> -
-              <strong>Repas du soir</strong>
-              <p>
-                Paëlla participative (participation financière demandée, rosé et
-                bière fournis, autres alcools à ramener)
-              </p>
+
+            <div class="timeline-event">
+              <div class="event-icon">🥘</div>
+              <div class="event-content">
+                <div class="event-time">20:00</div>
+                <div class="event-title">Repas du soir</div>
+                <div class="event-description">
+                  Paëlla participative (participation financière demandée, rosé
+                  et bière fournis, autres alcools à ramener)
+                </div>
+              </div>
             </div>
           </div>
 
           <!-- Samedi -->
-          <div class="day-card">
-            <h3>Samedi</h3>
-            <div class="event span-3">
-              <span class="event-icon">☀️</span>
-              <span class="event-time">Journée</span> -
-              <strong>Temps libre</strong>
-              <p>Détente et activités libres</p>
+          <div class="day-section">
+            <div class="day-title"><span>Samedi</span></div>
+
+            <div class="timeline-event">
+              <div class="event-icon">☀️</div>
+              <div class="event-content">
+                <div class="event-time">Journée</div>
+                <div class="event-title">Temps libre</div>
+                <div class="event-description">Détente et activités libres</div>
+              </div>
             </div>
-            <div class="event">
-              <span class="event-icon">🔔</span>
-              <span class="event-time">16:00</span> -
-              <strong>Regroupement</strong>
-              <p>Préparation pour la cérémonie</p>
+
+            <div class="timeline-event">
+              <div class="event-icon">🔔</div>
+              <div class="event-content">
+                <div class="event-time">16:00</div>
+                <div class="event-title">Regroupement</div>
+                <div class="event-description">
+                  Préparation pour la cérémonie
+                </div>
+              </div>
             </div>
-            <div class="event">
-              <span class="event-icon">💍</span>
-              <span class="event-time">16:30</span> -
-              <strong>Cérémonie laïque</strong>
-              <p>Lieu surprise</p>
+
+            <div class="timeline-event">
+              <div class="event-icon">💍</div>
+              <div class="event-content">
+                <div class="event-time">16:30</div>
+                <div class="event-title">Cérémonie laïque</div>
+                <div class="event-description">Lieu surprise</div>
+              </div>
             </div>
-            <div class="event span-2">
-              <span class="event-icon">🥂</span>
-              <span class="event-time">18:00</span> -
-              <strong>Photos / Apéro / Repas</strong>
-              <p>Soirée festive</p>
+
+            <div class="timeline-event">
+              <div class="event-icon">🥂</div>
+              <div class="event-content">
+                <div class="event-time">18:00</div>
+                <div class="event-title">Photos / Apéro / Repas</div>
+                <div class="event-description">Soirée festive</div>
+              </div>
             </div>
-            <span></span>
           </div>
 
           <!-- Dimanche -->
-          <div class="day-card">
-            <h3>Dimanche</h3>
-            <span></span>
-            <div class="event">
-              <span class="event-icon">🚚</span>
-              <span class="event-time">12:00</span> -
-              <strong>Repas Food Truck</strong>
-              <p>Déjeuner convivial</p>
+          <div class="day-section">
+            <div class="day-title"><span>Dimanche</span></div>
+
+            <div class="timeline-event">
+              <div class="event-icon">🚚</div>
+              <div class="event-content">
+                <div class="event-time">12:00</div>
+                <div class="event-title">Repas Food Truck</div>
+                <div class="event-description">Déjeuner convivial</div>
+              </div>
             </div>
-            <div class="event">
-              <span class="event-icon">🎯</span>
-              <span class="event-time">Après-midi</span> -
-              <strong>Activités libres</strong>
-              <p>Jeux, détente piscine, pétanque, sieste, rangement</p>
+
+            <div class="timeline-event">
+              <div class="event-icon">🎯</div>
+              <div class="event-content">
+                <div class="event-time">Après-midi</div>
+                <div class="event-title">Activités libres</div>
+                <div class="event-description">
+                  Jeux, détente piscine, pétanque, sieste, rangement
+                </div>
+              </div>
             </div>
-            <div class="event">
-              <span class="event-icon">👋</span>
-              <span class="event-time">16:00</span> -
-              <strong>Fin</strong>
-              <p>Départ</p>
+
+            <div class="timeline-event">
+              <div class="event-icon">👋</div>
+              <div class="event-content">
+                <div class="event-time">16:00</div>
+                <div class="event-title">Fin</div>
+                <div class="event-description">Départ</div>
+              </div>
             </div>
-            <span></span>
           </div>
         </div>
       </div>
@@ -128,16 +182,14 @@
       <!-- Message des mariés -->
       <div class="section" id="message">
         <h2>Le mot des mariés</h2>
-        <div class="message-box">
-          <p>
-            Nous sommes ravis de vous recevoir sur le domaine de Garandeau et
-            nous remercions Françoise et Yves de nous recevoir chez eux. Nous
-            avons choisi ce domaine car il correspond à notre image que l'on se
-            fait d'un mariage : convivial, champêtre, naturel et bienveillant.
-          </p>
-        </div>
+        <blockquote class="message-quote">
+          Nous sommes ravis de vous recevoir sur le domaine de Garandeau et nous
+          remercions Françoise et Yves de nous recevoir chez eux. Nous avons
+          choisi ce domaine car il correspond à notre image que l'on se fait
+          d'un mariage : convivial, champêtre, naturel et bienveillant.
+        </blockquote>
         <div class="rules">
-          <h3>⚠️ 2 règles à respecter :</h3>
+          <p><strong>2 règles à respecter :</strong></p>
           <ul>
             <li>
               Le domaine est classé et il est strictement interdit d'utiliser
@@ -148,64 +200,144 @@
         </div>
       </div>
 
-      <!-- Hébergements -->
-      <div class="section" id="hebergements">
-        <h2>Hébergements</h2>
-        <div class="accommodation-grid">
-          <div class="accommodation-card">
-            <h3>Les gîtes</h3>
-            <p>
-              Les gîtes sont réservés pour la famille (privilège de l'âge…) : le
-              pigeonnier, la maison bleue et pour les témoins (ils donnent de
-              leur personne pour cet avantage😉) : la résinière.
-            </p>
+      <!-- Les lieux -->
+      <div class="section" id="lieux">
+        <h2>Les lieux</h2>
+
+        <!-- Grid des lieux -->
+        <div class="venue-grid">
+          <!-- Les gîtes -->
+          <div class="venue-card">
+            <div class="venue-card-images">
+              <img
+                src="assets/terrasse du pigeonnier.webp"
+                alt="Le pigeonnier"
+              />
+              <img src="assets/la maison bleue.webp" alt="La maison bleue" />
+              <img src="assets/la résinière.webp" alt="La résinière" />
+            </div>
+            <div class="venue-card-content">
+              <h3>Les gîtes</h3>
+              <p>
+                Les gîtes sont réservés pour la famille (privilège de l'âge…) :
+                le pigeonnier, la maison bleue et pour les témoins (ils donnent
+                de leur personne pour cet avantage😉) : la résinière.
+              </p>
+            </div>
           </div>
-          <div class="accommodation-card">
-            <h3>Le dortoir</h3>
-            <p>
-              Un dortoir de 14 places est disponible, des places sont déjà
-              préréservées, merci de nous contacter si vous êtes intéressés
-              (promis on met des boules quies à disposition… 😉)
-            </p>
-            <p><strong>Capacité:</strong> 14 places</p>
+
+          <!-- Le dortoir -->
+          <div class="venue-card">
+            <div class="venue-card-images single">
+              <img
+                src="assets/DORTOIR-DE-GARANDEAU-scaled.jpg"
+                alt="Le dortoir"
+              />
+            </div>
+            <div class="venue-card-content">
+              <h3>Le dortoir</h3>
+              <p>
+                Un dortoir de 14 places est disponible, des places sont déjà
+                préréservées, merci de nous contacter si vous êtes intéressés
+                (promis on met des boules quies à disposition… 😉)
+              </p>
+              <p><strong>Capacité:</strong> 14 places</p>
+            </div>
           </div>
-          <div class="accommodation-card">
-            <h3>L'espace camping</h3>
-            <p>
-              Un espace camping est disponible pour hamac et tentes, des
-              sanitaires (3 toilettes et deux douches, 2 lavabos) sont également
-              à proximité au niveau de la piscine. Une salle de bain sera
-              également réservée dans le gîte des témoins pour fluidifier le
-              trafic du matin.
-            </p>
+
+          <!-- L'espace camping -->
+          <div class="venue-card">
+            <div class="venue-card-images single">
+              <img
+                src="assets/image toilettes douches camping.png"
+                alt="Sanitaires camping"
+              />
+            </div>
+            <div class="venue-card-content">
+              <h3>L'espace camping</h3>
+              <p>
+                Un espace camping est disponible pour hamac et tentes, des
+                sanitaires (3 toilettes et deux douches, 2 lavabos) sont
+                également à proximité au niveau de la piscine. Une salle de bain
+                sera également réservée dans le gîte des témoins pour fluidifier
+                le trafic du matin.
+              </p>
+            </div>
+          </div>
+
+          <!-- La piscine -->
+          <div class="venue-card">
+            <div class="venue-card-images single">
+              <img src="assets/piscine.jpg" alt="La piscine" />
+            </div>
+            <div class="venue-card-content">
+              <h3>La piscine</h3>
+              <p>
+                Ouverte le vendredi, samedi jusqu'à 16h et le dimanche. La
+                piscine sera fermée le samedi lors de la cérémonie, merci de
+                respecter cette volonté (je ne souhaite pas travailler le jour
+                de mon mariage…)
+              </p>
+            </div>
+          </div>
+
+          <!-- La salle -->
+          <div class="venue-card">
+            <div class="venue-card-images single">
+              <img src="assets/salle.jpeg" alt="La salle" />
+            </div>
+            <div class="venue-card-content">
+              <h3>La salle</h3>
+              <p>
+                Lieu de réception pour le repas, celui-ci se fera sous forme
+                d'atelier (= pas de repas assis), des tables, salons et tables
+                hautes seront disposés pour vous permettre de vous reposer (le
+                Ricard fait mal à force) mais le but est de circuler et créer
+                une ambiance conviviale.
+              </p>
+            </div>
+          </div>
+
+          <!-- Le lieu de la cérémonie -->
+          <div class="venue-card surprise">
+            <div class="venue-card-content">
+              <h3>Le lieu de la cérémonie laïque</h3>
+              <p>Surprise. RDV à 16h pour un début à 16h30 !</p>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Lieux et équipements -->
-      <div class="section" id="lieux">
-        <h2>Les lieux</h2>
-        <div class="facility-card">
-          <h3>La piscine</h3>
-          <p>
-            Ouverte le vendredi, samedi jusqu'à 16h et le dimanche. La piscine
-            sera fermée le samedi lors de la cérémonie, merci de respecter cette
-            volonté (je ne souhaite pas travailler le jour de mon mariage…)
-          </p>
+      <!-- Plan du domaine -->
+      <div class="section venue-plan-section" id="plan">
+        <h2>Plan du domaine</h2>
+        <div class="venue-plan">
+          <img
+            src="assets/plan garandeau.png"
+            alt="Plan du Domaine de Garandeau"
+          />
         </div>
-        <div class="facility-card">
-          <h3>La salle</h3>
-          <p>
-            Lieu de réception pour le repas, celui-ci se fera sous forme
-            d'atelier (= pas de repas assis), des tables, salons et tables
-            hautes seront disposés pour vous permettre de vous reposer (le
-            Ricard fait mal à force) mais le but est de circuler et créer une
-            ambiance conviviale.
-          </p>
-        </div>
-        <div class="facility-card">
-          <h3>Le lieu de la cérémonie laïque</h3>
-          <p>Surprise. RDV à 16h pour un début à 16h30 !</p>
+      </div>
+
+      <!-- Comment venir -->
+      <div class="section venue-access-section" id="acces">
+        <h2>Comment venir ?</h2>
+        <div class="access-info">
+          <div class="address">
+            <p><strong>Domaine de Garandeau</strong></p>
+            <p>D572, 13410 Lambesc</p>
+            <p>Entre Saint Cannat et La Barben</p>
+            <p>À 30 km de la gare TGV d'Aix-en-Provence</p>
+          </div>
+          <div class="map-link">
+            <a
+              href="https://www.google.com/maps/place/Domaine+de+Garandeau,+D572,+13410+Lambesc,+France"
+              target="_blank"
+              class="btn-map"
+            >
+              📍 Ouvrir dans Google Maps
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -225,9 +357,19 @@
           const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
           const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-          document.getElementById(
-            "countdown"
-          ).innerHTML = `${days} j ${hours}h ${minutes}m ${seconds}s`;
+          // Format avec des chiffres de largeur fixe
+          const d = String(days).padStart(3, "0");
+          const h = String(hours).padStart(2, "0");
+          const m = String(minutes).padStart(2, "0");
+          const s = String(seconds).padStart(2, "0");
+
+          document.getElementById("countdown").innerHTML =
+            `<span>${d[0]}</span><span>${d[1]}</span><span>${d[2]}</span><span>J</span>` +
+            `<span ></span>` +
+            `<span>${h[0]}</span><span>${h[1]}</span><span>H</span>` +
+            `<span ></span>` +
+            `<span>${m[0]}</span><span>${m[1]}</span><span>:</span>` +
+            `<span>${s[0]}</span><span>${s[1]}</span>`;
         } else {
           document.getElementById("countdown").innerHTML =
             "C'est aujourd'hui ! 🎉";
