@@ -470,30 +470,120 @@ body {
   }
 
   .timeline {
-    flex-direction: column;
+    padding: 20px 0;
   }
 
   .timeline::before {
-    left: 30px;
+    left: 20px;
+  }
+
+  .plane-follower {
+    left: 20px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .plane-follower svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  .day-section {
+    margin-bottom: 40px;
+  }
+
+  .day-title {
+    font-size: 1.6em;
+    margin-bottom: 25px;
   }
 
   .timeline-event {
     justify-content: flex-start !important;
+    margin: 20px 0 20px 0 !important;
+    min-height: auto;
+    position: relative;
+  }
+
+  .timeline-event:nth-child(odd),
+  .timeline-event:nth-child(even) {
+    justify-content: flex-start !important;
   }
 
   .event-content {
-    width: calc(100% - 100px);
-    margin-left: 100px !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: left !important;
+    padding: 15px !important;
+    position: relative;
+  }
+
+  .timeline-event:nth-child(odd) .event-content,
+  .timeline-event:nth-child(even) .event-content {
+    width: 100% !important;
+    margin-left: 0 !important;
     margin-right: 0 !important;
     text-align: left !important;
   }
 
   .event-icon {
-    left: 30px;
+    position: absolute;
+    right: 10px !important;
+    top: 10px !important;
+    left: auto !important;
+    width: 60px !important;
+    height: 60px !important;
+    transform: none !important;
+    margin: 5px;
+  }
+
+  .event-icon svg,
+  .event-icon img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .event-time {
+    font-size: 1em;
+    margin-bottom: 8px;
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  .event-title {
+    font-size: 0.95em;
+    margin-bottom: 6px;
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  .event-description {
+    font-size: 0.82em;
+    line-height: 1.5;
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  .timeline-event:nth-child(odd) .event-time,
+  .timeline-event:nth-child(even) .event-time {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  .timeline-event:nth-child(odd) .event-title,
+  .timeline-event:nth-child(even) .event-title {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  .timeline-event:nth-child(odd) .event-description,
+  .timeline-event:nth-child(even) .event-description {
+    width: 100% !important;
+    margin-left: 0 !important;
   }
 
   .countdown {
-    font-size: 1.5em;
+    font-size: 1.8em;
     margin-top: 30px;
     flex-direction: column;
     align-items: center;
@@ -548,12 +638,12 @@ body {
   }
 
   .board-label {
-    font-size: 0.9em;
+    font-size: 1em;
     margin-left: 3px;
   }
 
   .board-value {
-    font-size: 0.85em;
+    font-size: 0.95em;
     gap: 4px;
   }
 
@@ -867,7 +957,16 @@ body {
   margin-left: auto;
 }
 
+.timeline-event:nth-child(odd) .event-title {
+  width: 75%;
+  margin-left: auto;
+}
+
 .timeline-event:nth-child(even) .event-description {
+  width: 75%;
+}
+
+.timeline-event:nth-child(even) .event-title {
   width: 75%;
 }
 .section#message {
