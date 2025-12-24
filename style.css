@@ -188,55 +188,6 @@ body {
   z-index: 1;
 }
 
-.hero-header {
-  margin-bottom: 40px;
-}
-
-.hero-header p {
-  font-size: 2em;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.hero-content {
-  display: grid;
-  grid-template-columns: 35% 65%;
-  gap: 0;
-  align-items: start;
-}
-
-.hero-text {
-  padding-right: 20px;
-  padding-top: 20px;
-}
-
-.hero-date {
-  font-size: 1.4em;
-  color: #333;
-  margin: 10px 0;
-  line-height: 1.6;
-}
-
-.hero-venue {
-  font-size: 1.4em;
-  color: #333;
-  margin: 5px 0;
-  line-height: 1.6;
-}
-
-.hero-image {
-  width: 100%;
-  height: 550px;
-  overflow: hidden;
-  border-radius: 0;
-  position: relative;
-}
-
-.hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .countdown {
   font-size: 3.5em;
   font-weight: 700;
@@ -271,17 +222,6 @@ body {
   height: 2px;
   background: rgba(0, 0, 0, 0.4);
   transform: translateY(-50%);
-}
-
-/* Séparateurs (espaces) */
-.countdown .separator {
-  width: 0.3em;
-  background: transparent;
-  box-shadow: none;
-}
-
-.countdown .separator::before {
-  display: none;
 }
 
 /* Panneau d'aéroport */
@@ -370,10 +310,6 @@ body {
   transform: rotate(-45deg);
 }
 
-.board-spacer {
-  width: 80px;
-  height: 80px;
-}
 
 .board-info {
   background: #000;
@@ -454,19 +390,6 @@ body {
 
   .hero h1 {
     font-size: 3.5em;
-  }
-
-  .hero-content {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .hero-text {
-    padding-right: 0;
-  }
-
-  .hero-image {
-    height: 400px;
   }
 
   .timeline {
@@ -616,11 +539,6 @@ body {
   .plane-icon svg {
     width: 28px;
     height: 28px;
-  }
-
-  .board-spacer {
-    width: 45px;
-    height: 45px;
   }
 
   .board-title > p {
@@ -982,8 +900,7 @@ body {
 }
 
 #message h2,
-.message-quote,
-.rules {
+.message-quote {
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
@@ -1001,97 +918,31 @@ body {
   line-height: 2.2;
   color: #1a1a1a;
   margin-bottom: 60px;
-  padding-left: 60px;
-  padding-right: 60px;
   font-family: Georgia, serif;
 }
 
-.rules {
-  padding-left: 60px;
-  padding-right: 60px;
-}
-
-.rules p {
-  font-size: 1.6em;
-  margin-bottom: 40px;
-  color: #1a1a1a;
-  font-weight: 700;
-  font-family: "Courier New", Courier, monospace;
-}
-
-.rules ul {
+.message-quote ul {
   list-style: none;
   padding-left: 0;
-  margin: 0;
+  margin-top: 20px;
 }
 
-.rules li {
+.message-quote li {
   margin: 30px 0;
   padding-left: 30px;
   line-height: 2.2;
-  color: #1a1a1a;
   position: relative;
   font-size: 1.5em;
-  font-family: Georgia, serif;
 }
 
-.rules li::before {
+.message-quote li::before {
   content: "—";
   position: absolute;
   left: 0;
   color: #666;
   font-size: 1.2em;
 }
-.accommodation-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
-}
-.accommodation-card {
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  border: 2px solid #e8d5c4;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-.accommodation-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 5px;
-  background: linear-gradient(to right, #c9b5a0, #e8d5c4);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
-}
-.accommodation-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-  border-color: #c9b5a0;
-}
-.accommodation-card:hover::before {
-  transform: scaleX(1);
-}
-.accommodation-card h3 {
-  color: #1a1a1a;
-  margin-bottom: 15px;
-  font-size: 1.5em;
-  font-weight: bold;
-}
-.accommodation-card p {
-  line-height: 1.8;
-  color: #666;
-}
-.accommodation-card p strong {
-  color: #5a4a3a;
-  font-weight: bold;
-}
+
 /* Plan du domaine */
 .venue-plan {
   margin: 80px auto 0;
