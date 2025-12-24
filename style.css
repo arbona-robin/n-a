@@ -318,11 +318,13 @@ body {
 
 .board-title > h1 {
   font-size: 3.5em;
-  margin-bottom: 40px;
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
   letter-spacing: 0.1em;
   font-weight: 900;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+  line-height: 1.2em;
 }
 
 .board-row {
@@ -331,6 +333,14 @@ body {
   gap: 40px;
   align-items: top;
   margin-bottom: 15px;
+}
+
+.board-row-full {
+  display: grid;
+  gap: 40px;
+  align-items: top;
+  margin-bottom: 15px;
+  grid-template-columns: 1fr;
 }
 
 .board-row img {
@@ -485,8 +495,9 @@ body {
   .countdown {
     font-size: 1.5em;
     margin-top: 30px;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
   }
 
   .countdown span {
@@ -497,35 +508,57 @@ body {
 
   .airport-board {
     margin-top: 30px;
-    padding: 20px;
+    padding: 15px;
+    margin-bottom: 100px;
   }
 
   .board-row {
-    grid-template-columns: 60px 1fr;
-    gap: 15px;
+    grid-template-columns: 45px 1fr;
+    gap: 12px;
+    margin-bottom: 10px;
   }
 
   .plane-icon {
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
   }
 
   .plane-icon svg {
-    width: 35px;
-    height: 35px;
+    width: 28px;
+    height: 28px;
   }
 
   .board-spacer {
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
+  }
+
+  .board-title > p {
+    font-size: 1.2em;
+    padding-bottom: 10px;
+    max-width: 70px;
+  }
+
+  .board-title > h1 {
+    font-size: 2em;
+  }
+
+  .board-info {
+    padding: 10px 12px;
   }
 
   .board-label {
-    font-size: 1em;
+    font-size: 0.9em;
+    margin-left: 3px;
   }
 
   .board-value {
-    font-size: 1.2em;
+    font-size: 0.85em;
+    gap: 4px;
+  }
+
+  .board-value span {
+    padding: 0 5px;
   }
 }
 .section {
