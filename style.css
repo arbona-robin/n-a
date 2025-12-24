@@ -912,12 +912,21 @@ body {
 }
 
 .message-quote {
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-style: normal;
-  line-height: 2.2;
+  line-height: 1.9;
   color: #1a1a1a;
   margin-bottom: 60px;
   font-family: Georgia, serif;
+}
+
+.message-quote p {
+  margin-bottom: 20px;
+}
+
+.message-quote strong {
+  font-weight: 700;
+  color: #000;
 }
 
 .message-quote ul {
@@ -927,11 +936,10 @@ body {
 }
 
 .message-quote li {
-  margin: 30px 0;
+  margin: 20px 0;
   padding-left: 30px;
-  line-height: 2.2;
+  line-height: 1.8;
   position: relative;
-  font-size: 1.5em;
 }
 
 .message-quote li::before {
