@@ -1273,13 +1273,105 @@ body {
 }
 
 @media (max-width: 768px) {
-  .venue-grid {
-    grid-template-columns: 1fr;
+  /* Section Message */
+  .section#message {
+    padding: 40px 0;
+    margin: 100px 0;
+    left: 50%;
+    right: 50%;
+    margin-left: calc(-50vw);
+    margin-right: calc(-50vw - 20px);
   }
 
-  .access-info {
+  #message h2,
+  .message-quote,
+  .rules {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  #message h2 {
+    margin: 0px 20px 30px 20px;
+    font-size: 1.7em;
+  }
+
+  .message-quote {
+    font-size: 1em;
+    line-height: 1.8;
+    margin-bottom: 30px;
+  }
+
+  .message-quote p {
+    margin-bottom: 15px;
+  }
+
+  .message-quote ul {
+    margin-top: 15px;
+    padding-left: 20px;
+  }
+
+  .message-quote li {
+    font-size: 0.95em;
+    line-height: 1.7;
+    margin: 10px 0;
+  }
+
+  .rules p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+  }
+
+  .rules li {
+    font-size: 1em;
+    line-height: 1.8;
+    margin: 15px 0;
+    padding-left: 20px;
+  }
+
+  /* Section Lieux */
+  .lieux-board {
+    padding: 15px;
+  }
+
+  .lieux-board .board-row {
+    grid-template-columns: 45px 1fr;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .location-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .location-icon img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .lieux-title {
+    font-size: 2em !important;
+  }
+
+  .venue-grid {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 25px;
+    margin: 30px 0;
+  }
+
+  .venue-card-content {
+    padding: 20px;
+  }
+
+  .venue-card-content h3 {
+    font-size: 1.2em;
+    margin-bottom: 12px;
+  }
+
+  .venue-card-content p {
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin-bottom: 8px;
   }
 
   .venue-card-images {
@@ -1287,6 +1379,57 @@ body {
   }
 
   .venue-card-images img {
-    height: 250px;
+    height: 200px;
+  }
+
+  /* Section Comment venir */
+  .section.venue-access-section {
+    padding: 40px 0 60px 0;
+    margin-top: 100px;
+    left: 50%;
+    right: 50%;
+    margin-left: calc(-50vw);
+    margin-right: calc(-50vw - 20px);
+    margin-bottom: 0;
+  }
+
+  .venue-access-section h2 {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    margin: 0px 20px 30px 20px;
+    font-size: 1.7em;
+  }
+
+  .access-info {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  .address p {
+    font-size: 1em;
+    line-height: 1.7;
+    margin: 6px 0;
+  }
+
+  .address p strong {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+
+  .btn-map {
+    padding: 14px 30px;
+    font-size: 1em;
+  }
+
+  .venue-plan {
+    margin: 60px auto 0;
+    padding: 0 20px;
+  }
+
+  .venue-plan h3 {
+    font-size: 1.3em;
+    margin-bottom: 25px;
   }
 }
