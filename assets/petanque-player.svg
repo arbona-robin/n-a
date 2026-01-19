@@ -1,0 +1,29 @@
+<svg viewBox="0 0 100 100" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <!-- Tête -->
+  <circle cx="50" cy="12" r="8"/>
+
+  <!-- Corps penché en avant -->
+  <path d="M 50 20 L 50 32 Q 54 42 58 50"/>
+
+  <!-- Bras arrière levé -->
+  <path d="M 50 26 Q 38 22 30 12"/>
+
+  <!-- Bras avant tendu vers le bas -->
+  <path d="M 53 26 Q 62 38 68 52"/>
+
+  <!-- Main -->
+  <ellipse cx="69" cy="54" rx="3" ry="4"/>
+
+  <!-- Boule de pétanque proche de la main -->
+  <circle cx="75" cy="56" r="5"/>
+
+  <!-- Jambe arrière tendue -->
+  <path d="M 56 50 L 58 68 L 58 80"/>
+
+  <!-- Jambe avant légèrement pliée -->
+  <path d="M 58 50 Q 64 62 66 72 L 68 82"/>
+
+  <!-- Pieds -->
+  <ellipse cx="58" cy="82" rx="5" ry="2.5"/>
+  <ellipse cx="68" cy="84" rx="5" ry="2.5"/>
+</svg>
