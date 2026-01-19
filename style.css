@@ -1063,12 +1063,30 @@ body {
   padding: 30px;
 }
 
+.venue-card-content:has(h3) {
+  padding: 0;
+}
+
+.venue-card-content:has(+ .venue-card-images) {
+  padding: 0;
+}
+
+.venue-card-images + .venue-card-content {
+  padding: 30px;
+}
+
 .venue-card-content h3 {
-  color: #fff;
-  font-size: 1.5em;
-  margin-bottom: 15px;
-  font-weight: 700;
-  font-family: "Courier New", Courier, monospace;
+  color: #ccc;
+  font-size: 1.8em;
+  margin: 0;
+  padding: 25px 30px;
+  font-weight: 900;
+  font-family: "Orbitron", monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: #000;
+  text-align: center;
+  border-bottom: 3px solid #333;
 }
 
 .venue-card-content p {
@@ -1252,9 +1270,21 @@ body {
     padding: 20px;
   }
 
+  .venue-card-content:has(h3) {
+    padding: 0;
+  }
+
+  .venue-card-content:has(+ .venue-card-images) {
+    padding: 0;
+  }
+
+  .venue-card-images + .venue-card-content {
+    padding: 20px;
+  }
+
   .venue-card-content h3 {
-    font-size: 1.2em;
-    margin-bottom: 12px;
+    font-size: 1.1em;
+    padding: 20px;
   }
 
   .venue-card-content p {
