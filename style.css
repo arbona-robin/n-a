@@ -215,17 +215,6 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Ligne centrale pour effet flip d'aéroport */
-.countdown span::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  height: 2px;
-  background: rgba(0, 0, 0, 0.4);
-  transform: translateY(-50%);
-}
 
 /* Panneau d'aéroport */
 .airport-board {
@@ -356,16 +345,6 @@ body {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
-.board-value span::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  height: 1px;
-  background: rgba(0, 0, 0, 0.4);
-  transform: translateY(-50%);
-}
 
 @media (max-width: 1024px) {
   .hero,
@@ -420,6 +399,7 @@ body {
   .day-title {
     font-size: 1.6em;
     margin-bottom: 25px;
+    flex-wrap: wrap;
   }
 
   .timeline-event {
@@ -596,16 +576,6 @@ body {
   overflow: hidden;
 }
 
-.section h2::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  height: 2px;
-  background: rgba(0, 0, 0, 0.4);
-  transform: translateY(-50%);
-}
 
 /* Panneau aéroport pour les lieux */
 .lieux-board {
@@ -660,9 +630,6 @@ body {
   text-align: left !important;
 }
 
-.lieux-title::before {
-  background: rgba(0, 0, 0, 0.4) !important;
-}
 /* Timeline - Trajectoire d'avion */
 .timeline {
   position: relative;
@@ -735,29 +702,18 @@ body {
 .day-title span {
   display: inline-block;
   min-width: 0.8em;
-  height: 1.2em;
+  height: auto;
   text-align: center;
   background: #929f8c;
   color: #fff;
   border-radius: 6px;
   line-height: 1.2em;
-  padding: 0 0.15em;
+  padding: 0.15em 0.25em;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
   position: relative;
   overflow: hidden;
 }
 
-/* Ligne centrale pour effet flip d'aéroport */
-.day-title span::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  height: 1px;
-  background: rgba(0, 0, 0, 0.4);
-  transform: translateY(-50%);
-}
 
 .timeline-event {
   position: relative;
